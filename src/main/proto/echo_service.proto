@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.leisucn.test.grpcdemo.helloworld";
+option java_outer_classname = "EchoServiceProto";
+
+package helloworld;
+
+service EchoService {
+
+    rpc Echo (EchoRequest) returns (EchoReply) {}
+
+}
+
+message EchoRequest {
+    int32 syn = 1;
+}
+
+message EchoReply {
+    int32 ack = 1;
+}
